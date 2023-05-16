@@ -7,8 +7,9 @@ class Movie {
     public $date;
     public $vote;
     public $image;
+    public $genre;
     public $totalMovies = 1;
-    public function __construct($id, $title, $original_title, $nationality, $date, $vote, $image) {
+    public function __construct($id, $title, $original_title, $nationality, $date, $vote, $image, $genre = null) {
         $this->id = $id;
         $this->title = $title;
         $this->original_title = $original_title;
@@ -16,12 +17,15 @@ class Movie {
         $this->date = $date;
         $this->vote = $vote;
         $this->image = $image;
-        $this->totalMovies += 1;
+        $this->genre = $genre;
+        $this->countMovies();
     }
     public function getAge() {
         $movieYear = (explode( '-', $this->date))[0];
         $age = date("Y") - intval($movieYear);
         return "$age years";
     }
-
+    public function countMovies() {
+        $this->totalMovies += 1;
+    }
 }
