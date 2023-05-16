@@ -1,8 +1,11 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
- #logo{
-    filter: invert(1);
- }
+#logo {
+  filter: invert(1);
+}
+.cards li{
+    box-shadow: 0px 0px 3px black;
+}
