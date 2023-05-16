@@ -13,7 +13,7 @@ echo $newMovies[1]->getAge() */
 <main>
     <div class="container mx-auto">
         <div class="cards">
-            <h2 class=" text-3xl font-black mb-3">Ultime aggiunte</h2>
+            <h2 class=" text-3xl font-black my-3">Ultime aggiunte</h2>
             <ul class="flex gap-3">
                 <?php foreach ($newMovies as $movie) { ?>
                     <li class="rounded-md overflow-hidden">
