@@ -28,4 +28,10 @@ class Movie {
     public function countMovies() {
         $this->totalMovies += 1;
     }
+    public static function fetchAll($conn)
+    {
+        $sql = "SELECT * FROM  `movies`";
+        $result = $conn->query($sql);
+        return $result;
+    }
 }
